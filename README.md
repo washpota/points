@@ -1,3 +1,4 @@
+
 # Points Demo Service
 
 HTTP endpoint that displays the points earned during the previous three months
