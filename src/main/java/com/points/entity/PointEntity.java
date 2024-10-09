@@ -7,12 +7,33 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+/**
+ * PointEntity Class
+ * 
+ * @author ashwin.pakramzis
+ */
 @Entity
 @Table(name = "point")
 public class PointEntity {
     @Id
     @Column(nullable = false)
     private Long txnid;
+
+    public PointEntity(Long txnid, String user, Long amt, Long points, Date date) {
+        this.txnid = txnid;
+        this.user = user;
+        this.amt = amt;
+        this.points = points;
+        this.date = date;
+    }
+
+    public PointEntity() {
+        this.txnid = null;
+        this.user = null;
+        this.amt = null;
+        this.points = null;
+        this.date = null;
+    }
 
     @Column(nullable = false)
     private String user;
